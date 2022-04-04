@@ -9,8 +9,8 @@ export const HeroCard = ({
     characters,
 }) => {
   return (
-    <div className="col">
-      <div className="card">
+    <div className="col animate__animated animate__fadeIn">
+      <div className="card my-1">
           <div className="row">
             <div className="col-4">
               <img 

@@ -4,7 +4,6 @@ import { AuthContext } from '../../auth/authContext'
 import { types } from '../../types/index'
 
 export const LoginScreen = () => {
-  //customHook de react-router-dom
   const navigate =  useNavigate()
   const { dispatch } = useContext(AuthContext)
 
@@ -16,7 +15,9 @@ export const LoginScreen = () => {
     }
     dispatch(action)
 
-    navigate('/marvel', {
+    const lastPath = localStorage.getItem('lastPath') || '/marvel';
+
+    navigate( lastPath , {
       replace: true
     })
   }
